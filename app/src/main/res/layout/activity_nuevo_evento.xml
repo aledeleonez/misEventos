@@ -8,8 +8,8 @@
 
 
     <LinearLayout
-        android:layout_width="378dp"
-        android:layout_height="694dp"
+        android:layout_width="377dp"
+        android:layout_height="660dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +18,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="125dp"
+            android:layout_height="173dp"
             android:orientation="horizontal">
 
             <EditText
@@ -32,8 +32,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="140dp"
+                android:layout_height="160dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/app_name"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -52,7 +52,7 @@
         <EditText
             android:id="@+id/editTextTextPersonName2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -61,7 +61,7 @@
         <EditText
             android:id="@+id/editTextTextPersonName4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -70,7 +70,7 @@
         <EditText
             android:id="@+id/editTextTextPersonName5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="73dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"
@@ -79,7 +79,7 @@
         <EditText
             android:id="@+id/editTextTextPersonName6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="74dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:minHeight="48dp"

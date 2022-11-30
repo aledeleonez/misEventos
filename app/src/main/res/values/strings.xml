@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">misEventos</string>
+    <string name="nombre">Nombre</string>
+    <string name="descripcion">Descripción</string>
+    <string name="direccion">Dirección</string>
+    <string name="precio">Precio</string>
+    <string name="fecha">Fecha</string>
+    <string name="aforo">Aforo</string>
 </resources>
