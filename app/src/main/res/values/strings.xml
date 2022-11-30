@@ -6,4 +6,6 @@
     <string name="precio">Precio</string>
     <string name="fecha">Fecha</string>
     <string name="aforo">Aforo</string>
+    <string name="guardar">Guardar</string>
+    <string name="cerrar">Cerrar</string>
 </resources>

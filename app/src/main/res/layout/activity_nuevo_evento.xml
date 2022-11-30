@@ -33,7 +33,7 @@
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="140dp"
+                android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/app_name"
@@ -101,14 +101,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="@string/guardar" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/bt_cerrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="@string/cerrar" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
