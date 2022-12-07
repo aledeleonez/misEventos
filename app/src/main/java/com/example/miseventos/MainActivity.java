@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView eventos = findViewById(R.id.lvEventos);
+        ListView listEventos = findViewById(R.id.lvEventos);
+        listEventos.setAdapter(eventos);
 
     }
 }
