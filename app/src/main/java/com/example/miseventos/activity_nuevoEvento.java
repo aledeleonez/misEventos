@@ -1,6 +1,6 @@
 package com.example.miseventos;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static com.example.miseventos.MainActivity.eventos;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.ParseException;
 
@@ -61,50 +63,34 @@ public class activity_nuevoEvento extends AppCompatActivity implements View.OnCl
                 EditText etAforo = findViewById(R.id.txt_aforo);
                 ImageButton ibImagen = findViewById(R.id.imageButton);
 
-                try {
-                    if (etPrecio.getText().toString().equals("")) {
-                        Toast.makeText(this,
-                                Toast.LENGTH_LONG).show();
-                        return;
-                    }
-
-                    if (etAforo.getText().toString().equals(""))
-                        etAforo.setText("0");
-
-                    Evento evento = new Evento();
-                    evento.setNombre(etNombre.getText().toString());
-                    evento.setDescripcion(etDescripcion.getText().toString());
-                    evento.setDireccion(etDireccion.getText().toString());
-                    evento.setPrecio(Float.parseFloat(etPrecio.getText().toString()));
-                    evento.setAforo(Integer.parseInt(etAforo.getText().toString()));
-                    evento.setImagen(((BitmapDrawable) ibImagen.getDrawable()).getBitmap());
-
-                    Database db = new Database(this);
-                    switch (accion) {
-                        case "nuevo":
-                            db.nuevoEvento(evento);
-                            break;
-                        case "modificar":
-                            evento.setId(idEvento);
-                            db.modificarEvento(evento);
-                            break;
-                        default:
-                            break;
-                    }
-
-                    Toast.makeText(this, "El evento " + evento.getNombre() +
-                            " se ha guardado", Toast.LENGTH_LONG).show();
-
-                    etNombre.setText("");
-                    etNombre.requestFocus();
-                    etDescripcion.setText("");
-                    etDireccion.setText("");
-                    etPrecio.setText("");
-                    etAforo.setText("");
-                    etFecha.setText("");
-                } catch (ParseException pe) {
-                    Toast.makeText(this, "Formato de fecha no válido", Toast.LENGTH_LONG).show();
+                if (etPrecio.getText().toString().equals("")) {
+                    Toast.makeText(this, "Precio", Toast.LENGTH_LONG).show();
+                    return;
                 }
+
+                if (etAforo.getText().toString().equals(""))
+                    etAforo.setText("0");
+
+                Evento evento = new Evento();
+                evento.setNombre(etNombre.getText().toString());
+                evento.setDescripcion(etDescripcion.getText().toString());
+                evento.setDireccion(etDireccion.getText().toString());
+                evento.setPrecio(Float.parseFloat(etPrecio.getText().toString()));
+                evento.setAforo(Integer.parseInt(etAforo.getText().toString()));
+                evento.setImagen(((BitmapDrawable) ibImagen.getDrawable()).getBitmap());
+
+                eventos.add(evento);
+
+                Toast.makeText(this, "El evento " + evento.getNombre() +
+                        " se ha guardado", Toast.LENGTH_LONG).show();
+
+                etNombre.setText("");
+                etNombre.requestFocus();
+                etDescripcion.setText("");
+                etDireccion.setText("");
+                etPrecio.setText("");
+                etAforo.setText("");
+                etFecha.setText("");
                 break;
             case R.id.bt_cerrar:
                 onBackPressed();

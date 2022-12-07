@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<Evento> eventos;
+    public static List<Evento> eventos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
